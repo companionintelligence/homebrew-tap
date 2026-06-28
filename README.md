@@ -6,6 +6,7 @@ Homebrew tap for Companion Intelligence desktop apps.
 
 ```bash
 brew tap companionintelligence/homebrew-tap
+brew trust companionintelligence/homebrew-tap   # first time only, on recent Homebrew
 brew install --cask companion-hub
 ```
 
