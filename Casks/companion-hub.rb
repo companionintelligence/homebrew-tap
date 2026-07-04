@@ -1,18 +1,17 @@
 # Homebrew Cask formula for Companion Hub
 # Published via: https://github.com/companionintelligence/homebrew-tap
-# Installers are served from the public CDN (CI-Hub GitHub releases are private).
 
 cask "companion-hub" do
   version "0.2.37"
 
   on_intel do
-    url "https://dl.ci.computer/v0.2.37/macos/intel/Companion%20Hub_0.2.37_x64.dmg"
-    sha256 "e122fe7dfc69c51112cb81aab7543e11ae4ac0fef3a8966b90c0bd1ceb19df04"
+    url "https://github.com/companionintelligence/CI-Hub/releases/download/v#{version}/Companion.Hub_#{version}_x64.dmg"
+    sha256 "dfb3f899f5656ed4b0e3530b32de2655f65e39173e8faf27f869b9b8bde465d9"
   end
 
   on_arm do
-    url "https://dl.ci.computer/v0.2.37/macos/arm/Companion%20Hub_0.2.37_aarch64.dmg"
-    sha256 "a08866131bb32176e4e2459b77a241841f3438ddef1a30e76c8c41b59e0243dd"
+    url "https://github.com/companionintelligence/CI-Hub/releases/download/v#{version}/Companion.Hub_#{version}_aarch64.dmg"
+    sha256 "4f12d2557446a25a57721cde1f79fd185c47ee3d57b029df070af5200507dbc6"
   end
 
   name "Companion Hub"
