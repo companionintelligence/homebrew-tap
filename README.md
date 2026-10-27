@@ -2,7 +2,7 @@
 
 <p align="center"><strong>Homebrew tap for Companion Intelligence desktop apps.</strong></p>
 
-<p align="center"><a href="#install-companion-hub-macos">Get started</a></p>
+<p align="center"><a href="#install-companion-hub-macos">Get started</a> · <a href="https://docs.ci.computer/docs/reference/open-source-systems">Systems map</a></p>
 
 
 ## Install Companion Hub (macOS)
