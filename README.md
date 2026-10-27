@@ -1,6 +1,9 @@
-# companionintelligence/homebrew-tap
+<h1 align="center">Companion Intelligence Homebrew Tap</h1>
 
-Homebrew tap for Companion Intelligence desktop apps.
+<p align="center"><strong>Homebrew tap for Companion Intelligence desktop apps.</strong></p>
+
+<p align="center"><a href="#install-companion-hub-macos">Get started</a></p>
+
 
 ## Install Companion Hub (macOS)
 
