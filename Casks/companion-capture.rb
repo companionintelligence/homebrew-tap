@@ -1,14 +1,14 @@
 # Homebrew Cask for Companion Capture (tray capture client for CI-Server)
 cask "companion-capture" do
-  version "0.2.0-alpha.7"
+  version "0.2.0-alpha.8"
 
   on_arm do
-    sha256 "62aa59d548b4110a3b6b56bfdbcf28118ec421dd574600182e4da538f8d345be"
+    sha256 "69c7a287bbb993cb71abeabdf7dd06d2d8e51c37947b9e63df56466f4b454109"
 
     url "https://github.com/companionintelligence/CI-Capture/releases/download/v#{version}/Companion.Capture_#{version}_aarch64.dmg"
   end
   on_intel do
-    sha256 "362ef4f8e0a79f5f649eae78aab07756dff612c50ea3199e5e82a3141679578e"
+    sha256 "640475d45e1121d08606bf66962a84f13e5f85dd86e99b71d38df4110eb08503"
 
     url "https://github.com/companionintelligence/CI-Capture/releases/download/v#{version}/Companion.Capture_#{version}_x64.dmg"
   end
