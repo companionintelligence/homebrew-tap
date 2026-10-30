@@ -47,7 +47,19 @@ brew update
 brew upgrade --cask companion-hub
 ```
 
-Manifests are generated from [CI-Hub `distribution/`](https://github.com/companionintelligence/CI-Hub/tree/dev/distribution) on each desktop release.
+`Casks/companion-hub.rb` is generated from [Companion-Hub `distribution/`](https://github.com/companionintelligence/Companion-Hub/tree/dev/distribution) on each Hub desktop release. The other entries in this tap (`companion-memory`, `companion-capture`, `agent-sync`) are maintained by hand.
+
+## Install Companion Memory (macOS)
+
+Companion Memory runs its server in Docker: install and start Docker Desktop (or another Docker engine with Compose 2.24.4 or newer) first. The first launch pulls about 3 GB of container images.
+
+```bash
+brew tap companionintelligence/homebrew-tap
+brew trust companionintelligence/homebrew-tap   # first time only, on recent Homebrew
+brew install --cask companion-memory
+```
+
+Update with `brew upgrade --cask companion-memory`. The cask is bumped by hand for each `desktop-v*` [release](https://github.com/companionintelligence/Companion-Memory/releases). Uninstalling the app does not stop its containers or delete the Docker volumes that hold your memory.
 
 <!-- companion-hub-readme-deep-review -->
 
