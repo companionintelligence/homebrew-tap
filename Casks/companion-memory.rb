@@ -44,7 +44,7 @@ cask "companion-memory" do
     Companion Memory runs its server in Docker. Install and start Docker Desktop (or another
     Docker engine with Compose 2.24.4 or newer) before you open the app. The first launch pulls
     the app's container images (about 3 GB) and, if no Ollama is running or on your PATH,
-    downloads Ollama and two models.
+    downloads Ollama and up to two models.
 
     Uninstalling the app does not stop its containers or delete the Docker volumes that hold
     your memory. Choose Stop Stack in the app's tray menu first if you want the containers stopped.
