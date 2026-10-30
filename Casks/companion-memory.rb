@@ -8,15 +8,17 @@ cask "companion-memory" do
   desc "Private, self-hosted memory for your digital life and your AI agents"
   homepage "https://ci.computer/memory"
 
-  # This repo's "Latest" release is the server (v2026.10.23), not the desktop app, so
-  # the default GitHub-latest check would report a version that is not a desktop build.
-  # The desktop builds are the desktop-v* tags.
+  # The repo's Latest release is the server, not the desktop app, so Homebrew's default check
+  # would report a server version. The desktop builds are the desktop-v* releases, and one only
+  # counts once it lists the universal dmg this cask installs (some desktop releases carry
+  # Windows and Linux builds only).
   livecheck do
     url :url
     regex(/^desktop-v?(\d+(?:\.\d+)+)$/i)
     strategy :github_releases do |json, regex|
       json.filter_map do |release|
         next if release["draft"] || release["prerelease"]
+        next unless release["assets"]&.any? { |asset| asset["name"].to_s.end_with?("_universal.dmg") }
 
         match = release["tag_name"]&.match(regex)
         next if match.blank?
@@ -40,6 +42,11 @@ cask "companion-memory" do
 
   caveats <<~EOS
     Companion Memory runs its server in Docker. Install and start Docker Desktop (or another
-    Docker engine with Compose 2.24.4 or newer) before you open the app.
+    Docker engine with Compose 2.24.4 or newer) before you open the app. The first launch pulls
+    the app's container images (about 3 GB) and, if no Ollama is running or on your PATH,
+    downloads Ollama and two models.
+
+    Uninstalling the app does not stop its containers or delete the Docker volumes that hold
+    your memory. Choose Stop Stack in the app's tray menu first if you want the containers stopped.
   EOS
 end
