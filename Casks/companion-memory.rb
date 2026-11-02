@@ -1,7 +1,7 @@
 # Homebrew Cask for the Companion Memory desktop app (universal macOS build, signed and notarized)
 cask "companion-memory" do
-  version "0.1.4"
-  sha256 "7300e3ac215a327cbbed8f272e290cae6ce8be8eebe3e10e2ed1422d4050ccf5"
+  version "0.1.8"
+  sha256 "5270b87fe19d0de14f318e11b344727197499e4535c9013d0ae8c8b4459e8232"
 
   url "https://github.com/companionintelligence/Companion-Memory/releases/download/desktop-v#{version}/Companion.Memory_#{version}_universal.dmg"
   name "Companion Memory"
